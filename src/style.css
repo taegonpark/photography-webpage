@@ -2,63 +2,63 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: "Allison", cursive, sans-serif ;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 600;
     color: var(--secondary);
-    /* border: var(--border); */
 }
 :root {
-    --primary: rgb(28, 28, 29);
-    --secondary: rgb(206, 140, 164);
-    --border: 1px dashed rgba(255, 255, 255, 0.72);
+    --primary: rgb(252, 252, 252);
+    --secondary: rgb(34, 9, 18);
 }
 body {
     background-color: var(--primary);
-}
-header {
-    /* border-bottom: 1px solid var(--secondary);
     display: grid;
-    grid-template-rows: 140px 100px;
-    align-items: center;
-    justify-content: center; */
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+.sidebar {
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-bottom: 1px solid var(--secondary);
-    position: relative;
+    align-items: start;
+    gap: 20px;
+    border-right: 1px solid rgb(200, 200, 200);
+    background-color: rgb(248, 248, 248);
+    padding-top: 30px;
 }
-header::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url('assets/flowers.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.16; /* Adjust this to control transparency */
-  z-index: -1; /* Put it behind the content */
+.logo {
+    font-size: 30px;
 }
-header .logo{
+nav {
     display: flex;
-    gap: 10px;
-    justify-content: center;
+    flex-direction: column;
 }
-header .logo .title {
-    font-weight: 400;
-    font-size: 9vw;
-}
-header nav {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    justify-content: center;
-}
-header nav button {
+nav button {
     border: none;
     background: none;
-    font-size: 40px;
+    font-size: 24px;
+    display: flex;
+    color: rgba(34, 9, 18, 0.411);
 }
-header nav button:active {
+nav button:active {
     color: var(--primary); 
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 35px;
+    gap: 10px;
+    justify-content: end;
+}
+.photo {
+    background-color: rgb(246, 246, 246);
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 7px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
 }

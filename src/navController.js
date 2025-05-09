@@ -1,22 +1,29 @@
 // import "./style.css"
-import {createHomeContent, removeOldContainer, createMenuContent} from "./visuals"
+import {createConcertContent, removeOldPhotos, createTripContent, createOtherContent} from "./visuals"
 
 const buttons = document.querySelectorAll("button");
-const addHomeFunction = () => {
+const addConcertFunction = () => {
     buttons[0].addEventListener("click", ()=>{
-    removeOldContainer();
-    createHomeContent();
+    removeOldPhotos();
+    createConcertContent();
     });
 }
-const addMenuFunction = () => {
+const addTripFunction = () => {
     buttons[1].addEventListener("click", ()=>{
-    removeOldContainer();
-    createMenuContent();
+    removeOldPhotos();
+    createTripContent();
+    });
+}
+const addOtherFunction = () => {
+    buttons[2].addEventListener("click", ()=>{
+    removeOldPhotos();
+    createOtherContent();
     });
 }
 const startApp = () => {
-    addHomeFunction();
-    addMenuFunction();
+    addConcertFunction();
+    addTripFunction();
+    addOtherFunction()
     buttons[0].click();
 }
 export {startApp};
