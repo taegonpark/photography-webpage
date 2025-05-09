@@ -1,7 +1,7 @@
 // import "./style.css"
-import concert1 from './assets/boxer.jpg';
-import trip1 from './assets/untitled.jpg';
-import other1 from './assets/warrior.jpg';
+import concert1 from './assets/boxer.avif';
+import trip1 from './assets/untitled.avif';
+import other1 from './assets/warrior.avif';
 
 const content = document.querySelector(".content");
 

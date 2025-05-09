@@ -24,6 +24,6 @@ const startApp = () => {
     addConcertFunction();
     addTripFunction();
     addOtherFunction()
-    buttons[0].click();
+    // buttons[0].click();
 }
 export {startApp};
