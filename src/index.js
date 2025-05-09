@@ -1,4 +1,4 @@
 import "./style.css";
-import {startApp} from "./controller";
+import {startApp} from "./navController";
 
-startApp();
+// startApp();
