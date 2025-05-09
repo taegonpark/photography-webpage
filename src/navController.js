@@ -1,4 +1,3 @@
-// import "./style.css"
 import {createConcertContent, removeOldPhotos, createTripContent, createOtherContent} from "./visuals"
 
 const buttons = document.querySelectorAll("button");
