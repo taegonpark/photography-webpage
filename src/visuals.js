@@ -1,27 +1,39 @@
-import img1 from './assets/boxer.avif';
-import img2 from './assets/untitled.avif';
-import img3 from './assets/warrior.avif';
-// import imagePaths from './assets/assets.json';
-const images = [img1, img2, img3];
+import img0 from './assets/concerts/DSC00151.avif';
+import img1 from './assets/concerts/DSC07468.avif';
+import img2 from './assets/concerts/DSC07656.avif';
+import img3 from './assets/concerts/DSC07800.avif';
+import img4 from './assets/concerts/DSC07868.avif';
+import img5 from './assets/concerts/DSC07896.avif';
+import img6 from './assets/concerts/DSC096172.avif';
+import img7 from './assets/concerts/DSC09830.avif';
+import img8 from './assets/concerts/DSC098532.avif';
+import img9 from './assets/concerts/DSC09886.avif';
+const concertImages = [img7, img8, img0, img1, img4, img5, img9, img6, img2, img3];
+
+import img10 from './assets/trips/DSC03073.avif';
+import img11 from './assets/trips/DSC03145.avif';
+import img12 from './assets/trips/DSC03276.avif';
+import img13 from './assets/trips/DSC03676.avif';
+import img14 from './assets/trips/DSC03758.avif';
+import img15 from './assets/trips/DSC03798.avif';
+import img16 from './assets/trips/DSC03816.avif';
+import img17 from './assets/trips/DSC03817.avif';
+import img18 from './assets/trips/DSC03876.avif';
+import img19 from './assets/trips/DSC03945.avif';
+import img20 from './assets/trips/DSC05500.avif';
+import img21 from './assets/trips/DSC06513.avif';
+import img22 from './assets/trips/DSC06515.avif';
+import img23 from './assets/trips/DSC06570.avif';
+import img24 from './assets/trips/DSC06656.avif';
+const tripImages = [img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24];
+
+import img25 from './assets/other/DSC03320.avif';
+const otherImages = [img25];
+
 const content = document.querySelector(".content");
 
-// JSON METHOD FAILED
-// const createConcertContent = () => {
-//     imagePaths.forEach((path) => {
-//         const img = document.createElement('img');
-//         console.log(path);
-//         img.src = path;
-//         img.alt = "photo";
-//         const photo = document.createElement("div");
-//         photo.classList.add("photo");
-//         photo.appendChild(img);
-//         content.appendChild(photo);
-//     });
-// }
-
-// IMPORT ARRAY SUCCESS
 const createConcertContent = () => {
-    images.forEach((path) => {
+    concertImages.forEach((path) => {
         const photo = document.createElement("div");
         photo.classList.add("photo");
         const img = document.createElement('img');
@@ -32,46 +44,30 @@ const createConcertContent = () => {
         content.appendChild(photo);
     });
 }
-
-// DYNAMIC METHOD FAILED
-// const createConcertContent = () => {
-//     const imagesContext = require.context('./assets', false, /\.(avif|png|jpe?g|svg)$/);
-//     const imagesMap = {};
-
-//     imagesContext.keys().forEach((key) => {
-//         const fileName = key.replace('./', '');
-//         imagesMap[fileName] = imagesContext(key);
-//     });
-//     imagePaths.forEach((fileName) => {
-//         const img = document.createElement('img');
-//         console.log(imagesMap[fileName]);
-//         img.src = imagesMap[fileName];
-//         const photo = document.createElement("div");
-//         photo.classList.add("photo");
-//         img.alt = "photo";
-//         img.loading = 'lazy';
-//         photo.appendChild(img);
-//         content.appendChild(photo);
-//     });
-// }
-
 const createTripContent = () => {
-    // const photo1 = document.createElement("div");
-    // photo1.classList.add("photo");
-    // const img1 = document.createElement("img");
-    // img1.src = trip1;
-    // img1.alt = "untitled";
-    // photo1.append(img1);
-    // content.append(photo1);
+    tripImages.forEach((path) => {
+        const photo = document.createElement("div");
+        photo.classList.add("photo");
+        const img = document.createElement('img');
+        img.src = path;
+        img.alt = "photo";
+        img.loading = 'lazy';
+        photo.appendChild(img);
+        content.appendChild(photo);
+    });
 }
 const createOtherContent = () => {
-    // const photo1 = document.createElement("div");
-    // photo1.classList.add("photo");
-    // const img1 = document.createElement("img");
-    // img1.src = other1;
-    // img1.alt = "warrior";
-    // photo1.append(img1);
-    // content.append(photo1);
+    otherImages.forEach((path) => {
+        const photo = document.createElement("div");
+        photo.classList.add("photo");
+        photo.classList.add("solo");
+        const img = document.createElement('img');
+        img.src = path;
+        img.alt = "photo";
+        img.loading = 'lazy';
+        photo.appendChild(img);
+        content.appendChild(photo);
+    });
 }
 const removeOldPhotos= () => {
     const oldPhotos = document.querySelectorAll(".photo");

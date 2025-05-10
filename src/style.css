@@ -54,11 +54,15 @@ nav button:active {
 .photo {
     background-color: rgb(246, 246, 246);
     border: 1px solid rgb(200, 200, 200);
-    border-radius: 7px;
+    border-radius: 10px;
+    /* max-height: 200px; */
+}
+.photo.solo {
+    max-height: none;
 }
 img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 7px;
+    border-radius: 10px;
 }
